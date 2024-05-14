@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+    <style>
+    </style>
+<body>
+
+    <p>
+        red                        blue
+    </p>
+
+    <h1> 
+    <div style="display: inline-block; vertical-align: top;" id="redScore">0</div>
+              
+    <div style="display: inline-block; vertical-align: top;" id="blueScore">0</div>
+    </h1>
+
+    <p="display: flex;">
+        <button style="display: inline-block; vertical-align: top;" onclick="subRedZone1()">-</button>
+        <div style="display: inline-block; vertical-align: top;" id="redZone1">0</div>
+        <button style="display: inline-block; vertical-align: top;" onclick="addRedZone1()">+</button>
+         Z1  
+        <button style="display: inline-block; vertical-align: top;" onclick="subBlueZone1()">-</button>
+        <div style="display: inline-block; vertical-align: top;" id="blueZone1">0</div>
+        <button style="display: inline-block; vertical-align: top;" onclick="addBlueZone1()">+</button>
+    </p>
+
+    <p="display: flex;">
+        <button style="display: inline-block; vertical-align: top;" onclick="subRedZone2()">-</button>
+        <div style="display: inline-block; vertical-align: top;" id="redZone2">0</div>
+        <button style="display: inline-block; vertical-align: top;" onclick="addRedZone2()">+</button>
+         Z2  
+        <button style="display: inline-block; vertical-align: top;" onclick="subBlueZone2()">-</button>
+        <div style="display: inline-block; vertical-align: top;" id="blueZone2">0</div>
+        <button style="display: inline-block; vertical-align: top;" onclick="addBlueZone2()">+</button>
+    </p>
+
+    <p="display: flex;">
+        <button style="display: inline-block; vertical-align: top;" onclick="subRedBin()">-</button>
+        <div style="display: inline-block; vertical-align: top;" id="redBin">0</div>
+        <button style="display: inline-block; vertical-align: top;" onclick="addRedBin()">+</button>
+         Bin 
+        <button style="display: inline-block; vertical-align: top;" onclick="subBlueBin()">-</button>
+        <div style="display: inline-block; vertical-align: top;" id="blueBin">0</div>
+        <button style="display: inline-block; vertical-align: top;" onclick="addBlueBin()">+</button>
+    </p>
+    
+    <p>
+         
+    </p>
+
+    <p>
+        <button style="display: inline-block; vertical-align: top;" onclick="reset()">reset</button>
+    </p>
+
+    <script>
+        let redScore = 0;
+        let redZone1 = 0;
+        let redZone2 = 0;
+        let redBin = 0;
+
+        let blueScore = 0;
+        let blueZone1 = 0;
+        let blueZone2 = 0;
+        let blueBin = 0;
+
+        function addRedZone1() {
+            
+            redScore+=1;
+            redZone1+=1;
+            document.getElementById('redScore').innerText = redScore;
+            document.getElementById('redZone1').innerText = redZone1;
+        }
+        function subRedZone1() {
+            if (redZone1>0) {
+            redScore-=1;
+            redZone1-=1;
+            document.getElementById('redScore').innerText = redScore;
+            document.getElementById('redZone1').innerText = redZone1;
+            }
+        }
+
+        function addBlueZone1() {
+            blueScore+=1;
+            blueZone1+=1;
+            document.getElementById('blueScore').innerText = blueScore;
+            document.getElementById('blueZone1').innerText = blueZone1;
+        }
+        function subBlueZone1() {
+            if (blueZone1>0) {
+            blueScore-=1;
+            blueZone1-=1;
+            document.getElementById('blueScore').innerText = blueScore;
+            document.getElementById('blueZone1').innerText = blueZone1;
+            }
+        }
+
+
+        function addRedZone2() {
+            
+            redScore+=2;
+            redZone2+=1;
+            document.getElementById('redScore').innerText = redScore;
+            document.getElementById('redZone2').innerText = redZone2;
+        }
+        function subRedZone2() {
+            if (redZone2>0) {
+            redScore-=2;
+            redZone2-=1;
+            document.getElementById('redScore').innerText = redScore;
+            document.getElementById('redZone2').innerText = redZone2;
+            }
+        }
+
+        function addBlueZone2() {
+            blueScore+=2;
+            blueZone2+=1;
+            document.getElementById('blueScore').innerText = blueScore;
+            document.getElementById('blueZone2').innerText = blueZone2;
+        }
+        function subBlueZone2() {
+            if (blueZone2>0) {
+            blueScore-=2;
+            blueZone2-=1;
+            document.getElementById('blueScore').innerText = blueScore;
+            document.getElementById('blueZone2').innerText = blueZone2;
+            }
+        }
+
+
+        function addRedBin() {
+            
+            redScore+=4;
+            redBin+=1;
+            document.getElementById('redScore').innerText = redScore;
+            document.getElementById('redBin').innerText = redBin;
+        }
+        function subRedBin() {
+            if (redBin>0) {
+            redScore-=4;
+            redBin-=1;
+            document.getElementById('redScore').innerText = redScore;
+            document.getElementById('redBin').innerText = redBin;
+            }
+        }
+
+        function addBlueBin() {
+            blueScore+=4;
+            blueBin+=1;
+            document.getElementById('blueScore').innerText = blueScore;
+            document.getElementById('blueBin').innerText = blueBin;
+        }
+        function subBlueBin() {
+            if (blueBin>0) {
+            blueScore-=4;
+            blueBin-=1;
+            document.getElementById('blueScore').innerText = blueScore;
+            document.getElementById('blueBin').innerText = blueBin;
+            }
+        }
+
+
+        function reset() {
+            redScore = 0;
+            redZone1 = 0;
+            redZone2 = 0;
+            redBin = 0;
+
+            blueScore = 0;
+            blueZone1 = 0;
+            blueZone2 = 0;
+            blueBin = 0;
+
+            document.getElementById('redScore').innerText = redScore;
+            document.getElementById('redZone1').innerText = redZone1;
+            document.getElementById('redZone2').innerText = redZone2;
+            document.getElementById('redBin').innerText = redBin;
+            document.getElementById('blueScore').innerText = blueScore;
+            document.getElementById('blueZone1').innerText = blueZone1;
+            document.getElementById('blueZone2').innerText = blueZone2;
+            document.getElementById('blueBin').innerText = blueBin;
+        }
+    </script>
+</body>
+</html>
