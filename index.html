@@ -2,8 +2,8 @@
 <html>
     <style>
         body {
-/*             transform: scale(3);
-            transform-origin: 0 0; */
+            transform: scale(3);
+            transform-origin: 0 0; 
             text-align: center;
             max-width: max-content;
 
@@ -11,7 +11,6 @@
             
         }
     </style>
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 <body>
 
     <p>
@@ -31,6 +30,28 @@
         autonomous
         <input type="checkbox" id="redAuton" style="display: inline-block; vertical-align: top;">
     </p>
+
+    <script>
+        var redAutoBox = document.querySelector("input[name=checkbox]");
+        var blueAutoBox = document.querySelector("input[name=checkbox]");
+
+        redAutoBox.addEventListener('change', function() {
+          if (this.checked) {
+            alert("Checkbox is checked..");
+          } else {
+            alert("Checkbox is not checked..");
+          }
+        });
+
+        blueAutoBox.addEventListener('change', function() {
+          if (this.checked) {
+            alert("Checkbox is checked..");
+          } else {
+            alert("Checkbox is not checked..");
+          }
+        });
+    </script>
+    
 
     <p="display: flex;">
         <button style="display: inline-block; vertical-align: top;" onclick="subRedZone1()">-</button>
