@@ -26,36 +26,83 @@
     <p="display: flex">
         <input type="checkbox" id="redAuton" style="display: inline-block; vertical-align: top;">
         autonomous
-        <input type="checkbox" id="redAuton" style="display: inline-block; vertical-align: top;">
+        <input type="checkbox" id="blueAuton" style="display: inline-block; vertical-align: top;">
     </p>
 
     <script>
-        var redAutoBox = document.querySelector("input[name=checkbox]");
-        var blueAutoBox = document.querySelector("input[name=checkbox]");
+        var redAutoBox = document.getElementById("redAuton");
+        var blueAutoBox = document.getElementById("blueAuton");
+        var redAutoVal = document.getElementById("redAuton").value;
+        var blueAutoVal;
+        
 
         redAutoBox.addEventListener('change', function() {
+          blueAutoVal = document.getElementById("blueAuton").value;
           if (this.checked) {
-            alert("Checkbox is checked..");
+            if (blueAutoVal != "true") {
+                redScore += 10;
+                document.getElementById('redScore').innerText = redScore;
+            }
+            else {
+                redScore += 5;
+                blueScore -= 5;
+                document.getElementById('redScore').innerText = redScore;
+                document.getElementById('blueScore').innerText = blueScore;
+            }
           } else {
-            alert("Checkbox is not checked..");
+            if (blueAutoVal != true) {
+                redScore -= 10;
+                document.getElementById('redScore').innerText = redScore;
+            }
+            else {
+                redScore -= 5;
+                blueScore += 5;
+                document.getElementById('redScore').innerText = redScore;
+                document.getElementById('blueScore').innerText = blueScore;
+            }
           }
         });
 
         blueAutoBox.addEventListener('change', function() {
           if (this.checked) {
-            alert("Checkbox is checked..");
+            if (blueAutoVal != "true") {
+                redScore += 10;
+                document.getElementById('redScore').innerText = redScore;
+            }
+            else {
+                redScore += 5;
+                blueScore -= 5;
+                document.getElementById('redScore').innerText = redScore;
+                document.getElementById('blueScore').innerText = blueScore;
+            }
           } else {
-            alert("Checkbox is not checked..");
+            if (blueAutoVal != true) {
+                redScore -= 10;
+                document.getElementById('redScore').innerText = redScore;
+            }
+            else {
+                redScore -= 5;
+                blueScore += 5;
+                document.getElementById('redScore').innerText = redScore;
+                document.getElementById('blueScore').innerText = blueScore;
+            }
           }
         });
     </script>
     
+    <p>
+         
+    </p>
+
+    <p>
+        <b>Tennis Ball</b>
+    </p>
 
     <p="display: flex;">
         <button style="display: inline-block; vertical-align: top;" onclick="subRedZone1()">-</button>
         <div style="display: inline-block; vertical-align: top;" id="redZone1">0</div>
         <button style="display: inline-block; vertical-align: top;" onclick="addRedZone1()">+</button>
-         Z1  
+         Zone 1 
         <button style="display: inline-block; vertical-align: top;" onclick="subBlueZone1()">-</button>
         <div style="display: inline-block; vertical-align: top;" id="blueZone1">0</div>
         <button style="display: inline-block; vertical-align: top;" onclick="addBlueZone1()">+</button>
@@ -65,7 +112,7 @@
         <button style="display: inline-block; vertical-align: top;" onclick="subRedZone2()">-</button>
         <div style="display: inline-block; vertical-align: top;" id="redZone2">0</div>
         <button style="display: inline-block; vertical-align: top;" onclick="addRedZone2()">+</button>
-         Z2  
+         Zone 2 
         <button style="display: inline-block; vertical-align: top;" onclick="subBlueZone2()">-</button>
         <div style="display: inline-block; vertical-align: top;" id="blueZone2">0</div>
         <button style="display: inline-block; vertical-align: top;" onclick="addBlueZone2()">+</button>
@@ -75,10 +122,48 @@
         <button style="display: inline-block; vertical-align: top;" onclick="subRedBin()">-</button>
         <div style="display: inline-block; vertical-align: top;" id="redBin">0</div>
         <button style="display: inline-block; vertical-align: top;" onclick="addRedBin()">+</button>
-         Bin 
+            Bin    
         <button style="display: inline-block; vertical-align: top;" onclick="subBlueBin()">-</button>
         <div style="display: inline-block; vertical-align: top;" id="blueBin">0</div>
         <button style="display: inline-block; vertical-align: top;" onclick="addBlueBin()">+</button>
+    </p>
+
+    <p>
+         
+    </p>
+
+    <p>
+        <b>Beach Ball</b>
+    </p>
+
+    <p="display: flex;">
+        <button style="display: inline-block; vertical-align: top;" onclick="subRedZone1Beach()">-</button>
+        <div style="display: inline-block; vertical-align: top;" id="redZone1Beach">0</div>
+        <button style="display: inline-block; vertical-align: top;" onclick="addRedZone1Beach()">+</button>
+         Zone 1 
+        <button style="display: inline-block; vertical-align: top;" onclick="subBlueZone1Beach()">-</button>
+        <div style="display: inline-block; vertical-align: top;" id="blueZone1Beach">0</div>
+        <button style="display: inline-block; vertical-align: top;" onclick="addBlueZone1Beach()">+</button>
+    </p>
+
+    <p="display: flex;">
+        <button style="display: inline-block; vertical-align: top;" onclick="subRedZone2Beach()">-</button>
+        <div style="display: inline-block; vertical-align: top;" id="redZone2Beach">0</div>
+        <button style="display: inline-block; vertical-align: top;" onclick="addRedZone2Beach()">+</button>
+         Zone 2 
+        <button style="display: inline-block; vertical-align: top;" onclick="subBlueZone2Beach()">-</button>
+        <div style="display: inline-block; vertical-align: top;" id="blueZone2Beach">0</div>
+        <button style="display: inline-block; vertical-align: top;" onclick="addBlueZone2Beach()">+</button>
+    </p>
+
+    <p="display: flex;">
+        <button style="display: inline-block; vertical-align: top;" onclick="subRedBinBeach()">-</button>
+        <div style="display: inline-block; vertical-align: top;" id="redBinBeach">0</div>
+        <button style="display: inline-block; vertical-align: top;" onclick="addRedBinBeach()">+</button>
+            Bin    
+        <button style="display: inline-block; vertical-align: top;" onclick="subBlueBinBeach()">-</button>
+        <div style="display: inline-block; vertical-align: top;" id="blueBinBeach">0</div>
+        <button style="display: inline-block; vertical-align: top;" onclick="addBlueBinBeach()">+</button>
     </p>
     
     <p>
@@ -89,9 +174,9 @@
         <button style="display: inline-block; vertical-align: top;" onclick="reset()">reset</button>
     </p>
 
-    <p>
+    <!-- <p>
         <img src="img_8149.png" alt="Sean" width="200" height="200">
-    </p>
+    </p> -->
 
     <script>
         let redScore = 0;
@@ -103,6 +188,23 @@
         let blueZone1 = 0;
         let blueZone2 = 0;
         let blueBin = 0;
+
+
+
+
+        let redScoreBeach = 0;
+        let redZone1Beach = 0;
+        let redZone2Beach = 0;
+        let redBinBeach = 0;
+
+        let blueScoreBeach = 0;
+        let blueZone1Beach = 0;
+        let blueZone2Beach = 0;
+        let blueBinBeach = 0;
+
+        
+
+
 
         function addRedZone1() {
             
@@ -200,6 +302,108 @@
         }
 
 
+
+
+
+        function addRedZone1Beach() {
+            
+            redScore+=5;
+            redZone1Beach+=1;
+            document.getElementById('redScore').innerText = redScore;
+            document.getElementById('redZone1Beach').innerText = redZone1Beach;
+        }
+        function subRedZone1Beach() {
+            if (redZone1Beach>0) {
+            redScore-=5;
+            redZone1Beach-=1;
+            document.getElementById('redScore').innerText = redScore;
+            document.getElementById('redZone1Beach').innerText = redZone1Beach;
+            }
+        }
+
+        function addBlueZone1Beach() {
+            blueScore+=5;
+            blueZone1Beach+=1;
+            document.getElementById('blueScore').innerText = blueScore;
+            document.getElementById('blueZone1Beach').innerText = blueZone1Beach;
+        }
+        function subBlueZone1Beach() {
+            if (blueZone1Beach>0) {
+            blueScore-=5;
+            blueZone1Beach-=1;
+            document.getElementById('blueScore').innerText = blueScore;
+            document.getElementById('blueZone1Beach').innerText = blueZone1Beach;
+            }
+        }
+
+
+        function addRedZone2Beach() {
+            
+            redScore+=10;
+            redZone2Beach+=1;
+            document.getElementById('redScore').innerText = redScore;
+            document.getElementById('redZone2Beach').innerText = redZone2Beach;
+        }
+        function subRedZone2Beach() {
+            if (redZone2Beach>0) {
+            redScore-=10;
+            redZone2Beach-=1;
+            document.getElementById('redScore').innerText = redScore;
+            document.getElementById('redZone2Beach').innerText = redZone2Beach;
+            }
+        }
+
+        function addBlueZone2Beach() {
+            blueScore+=10;
+            blueZone2Beach+=1;
+            document.getElementById('blueScore').innerText = blueScore;
+            document.getElementById('blueZone2Beach').innerText = blueZone2Beach;
+        }
+        function subBlueZone2Beach() {
+            if (blueZone2Beach>0) {
+            blueScore-=10;
+            blueZone2Beach-=1;
+            document.getElementById('blueScore').innerText = blueScore;
+            document.getElementById('blueZone2Beach').innerText = blueZone2Beach;
+            }
+        }
+
+
+        function addRedBinBeach() {
+            
+            redScore+=20;
+            redBinBeach+=1;
+            document.getElementById('redScore').innerText = redScore;
+            document.getElementById('redBinBeach').innerText = redBinBeach;
+        }
+        function subRedBinBeach() {
+            if (redBinBeach>0) {
+            redScore-=20;
+            redBinBeach-=1;
+            document.getElementById('redScore').innerText = redScore;
+            document.getElementById('redBinBeach').innerText = redBinBeach;
+            }
+        }
+
+        function addBlueBinBeach() {
+            blueScore+=20;
+            blueBinBeach+=1;
+            document.getElementById('blueScore').innerText = blueScore;
+            document.getElementById('blueBinBeach').innerText = blueBinBeach;
+        }
+        function subBlueBinBeach() {
+            if (blueBinBeach>0) {
+            blueScore-=20;
+            blueBinBeach-=1;
+            document.getElementById('blueScore').innerText = blueScore;
+            document.getElementById('blueBinBeach').innerText = blueBinBeach;
+            }
+        }
+
+
+
+
+
         function reset() {
             redScore = 0;
             redZone1 = 0;
@@ -211,14 +415,31 @@
             blueZone2 = 0;
             blueBin = 0;
 
-            document.getElementById('redScore').innerText = redScore;
-            document.getElementById('redZone1').innerText = redZone1;
-            document.getElementById('redZone2').innerText = redZone2;
-            document.getElementById('redBin').innerText = redBin;
-            document.getElementById('blueScore').innerText = blueScore;
-            document.getElementById('blueZone1').innerText = blueZone1;
-            document.getElementById('blueZone2').innerText = blueZone2;
-            document.getElementById('blueBin').innerText = blueBin;
+            redScoreBeach = 0;
+            redZone1Beach = 0;
+            redZone2Beach = 0;
+            redBinBeach = 0;
+
+            blueScoreBeach = 0;
+            blueZone1Beach = 0;
+            blueZone2Beach = 0;
+            blueBinBeach = 0;
+
+            document.getElementById('redScore').innerText = 0;
+            document.getElementById('redZone1').innerText = 0;
+            document.getElementById('redZone2').innerText = 0;
+            document.getElementById('redBin').innerText = 0;
+            document.getElementById('blueScore').innerText = 0;
+            document.getElementById('blueZone1').innerText = 0;
+            document.getElementById('blueZone2').innerText = 0;
+            document.getElementById('blueBin').innerText = 0;
+
+            document.getElementById('redZone1Beach').innerText = 0;
+            document.getElementById('redZone2Beach').innerText = 0;
+            document.getElementById('redBinBeach').innerText = 0;
+            document.getElementById('blueZone1Beach').innerText = 0;
+            document.getElementById('blueZone2Beach').innerText = 0;
+            document.getElementById('blueBinBeach').innerText = 0;
         }
     </script>
 </body>
