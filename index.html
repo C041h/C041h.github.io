@@ -22,6 +22,10 @@
     <div style="display: inline-block; vertical-align: top;" id="blueScore">0</div>
     </h1>
 
+    <p>
+         
+    </p>
+
     
     <p="display: flex">
         <input type="checkbox" id="redAuton" style="display: inline-block; vertical-align: top;">
@@ -93,73 +97,6 @@
 
 
 
-    <p="display: flex">
-        <input type="checkbox" id="redEndgame" style="display: inline-block; vertical-align: top;">
-        endgame
-        <input type="checkbox" id="blueEndgame" style="display: inline-block; vertical-align: top;">
-    </p>
-
-    <script>
-        var redEndBox = document.getElementById("redEndgame");
-        var blueEndBox = document.getElementById("blueEndgame");
-        var redEndVal;
-        var blueAutoVal;
-        
-
-        redEndBox.addEventListener('change', function() {
-        blueEndVal = document.getElementById("blueEndgame").value;
-        if (this.checked) {
-            if (blueEndVal != "on1") {
-                redScore += 10;
-                document.getElementById('redScore').innerText = redScore;
-            }
-            else {
-                redScore += 5;
-                blueScore -= 5;
-                document.getElementById('redScore').innerText = redScore;
-                document.getElementById('blueScore').innerText = blueScore;
-            }
-        } else {
-            if (blueEndVal != "on1") {
-                redScore -= 10;
-                document.getElementById('redScore').innerText = redScore;
-            }
-            else {
-                redScore -= 5;
-                blueScore += 5;
-                document.getElementById('redScore').innerText = redScore;
-                document.getElementById('blueScore').innerText = blueScore;
-            }
-        }
-        });
-
-        blueEndBox.addEventListener('change', function() {
-        redEndVal = document.getElementById("redEndgame").value;
-        if (this.checked) {
-            if (redEndVal != "on1") {
-                blueScore += 10;
-                document.getElementById('blueScore').innerText = blueScore;
-            }
-            else {
-                blueScore += 5;
-                redScore -= 5;
-                document.getElementById('blueScore').innerText = blueScore;
-                document.getElementById('redScore').innerText = redScore;
-            }
-        } else {
-            if (redEndVal != "on1") {
-                blueScore -= 10;
-                document.getElementById('blueScore').innerText = blueScore;
-            }
-            else {
-                blueScore -= 5;
-                redScore += 5;
-                document.getElementById('blueScore').innerText = blueScore;
-                document.getElementById('redScore').innerText = redScore;
-            }
-        }
-        });
-    </script>
 
 
     
@@ -239,17 +176,95 @@
         <button style="display: inline-block; vertical-align: top;" onclick="addBlueBinBeach()">+</button>
     </p>
     
-    <p>
-         
-    </p>
 
-    <p>
-        <button style="display: inline-block; vertical-align: top;" onclick="reset()">reset</button>
-    </p>
+    <script>
+        var redEndBox = document.getElementById("redEndgame");
+        var blueEndBox = document.getElementById("blueEndgame");
+        var redEndVal;
+        var blueAutoVal;
+        
+
+        redEndBox.addEventListener('change', function() {
+        blueEndVal = document.getElementById("blueEndgame").value;
+        if (this.checked) {
+            if (blueEndVal != "on1") {
+                redScore += 20;
+                document.getElementById('redScore').innerText = redScore;
+            }
+            else {
+                redScore += 10;
+                blueScore -= 10;
+                document.getElementById('redScore').innerText = redScore;
+                document.getElementById('blueScore').innerText = blueScore;
+            }
+        } else {
+            if (blueEndVal != "on1") {
+                redScore -= 20;
+                document.getElementById('redScore').innerText = redScore;
+            }
+            else {
+                redScore -= 10;
+                blueScore += 10;
+                document.getElementById('redScore').innerText = redScore;
+                document.getElementById('blueScore').innerText = blueScore;
+            }
+        }
+        });
+
+        blueEndBox.addEventListener('change', function() {
+        redEndVal = document.getElementById("redEndgame").value;
+        if (this.checked) {
+            if (redEndVal != "on1") {
+                blueScore += 20;
+                document.getElementById('blueScore').innerText = blueScore;
+            }
+            else {
+                blueScore += 10;
+                redScore -= 10;
+                document.getElementById('blueScore').innerText = blueScore;
+                document.getElementById('redScore').innerText = redScore;
+            }
+        } else {
+            if (redEndVal != "on1") {
+                blueScore -= 20;
+                document.getElementById('blueScore').innerText = blueScore;
+            }
+            else {
+                blueScore -= 10;
+                redScore += 10;
+                document.getElementById('blueScore').innerText = blueScore;
+                document.getElementById('redScore').innerText = redScore;
+            }
+        }
+        });
+    </script>
+
 
     <!-- <p>
         <img src="img_8149.png" alt="Sean" width="200" height="200">
     </p> -->
+
+    <p>
+         
+    </p>
+
+
+    <p="display: flex">
+        <input type="checkbox" id="redEndgame" style="display: inline-block; vertical-align: top;">
+        endgame
+        <input type="checkbox" id="blueEndgame" style="display: inline-block; vertical-align: top;">
+    </p>
+
+
+    <p>
+         
+    </p>
+
+    
+    <p>
+        <button style="display: inline-block; vertical-align: top;" onclick="reset()">reset</button>
+    </p>
+
 
     <script>
         let redScore = 0;
