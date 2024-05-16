@@ -32,14 +32,14 @@
     <script>
         var redAutoBox = document.getElementById("redAuton");
         var blueAutoBox = document.getElementById("blueAuton");
-        var redAutoVal = document.getElementById("redAuton").value;
+        var redAutoVal;
         var blueAutoVal;
         
 
         redAutoBox.addEventListener('change', function() {
           blueAutoVal = document.getElementById("blueAuton").value;
           if (this.checked) {
-            if (blueAutoVal != "true") {
+            if (blueAutoVal != "on") {
                 redScore += 10;
                 document.getElementById('redScore').innerText = redScore;
             }
@@ -50,7 +50,7 @@
                 document.getElementById('blueScore').innerText = blueScore;
             }
           } else {
-            if (blueAutoVal != true) {
+            if (blueAutoVal != "on") {
                 redScore -= 10;
                 document.getElementById('redScore').innerText = redScore;
             }
@@ -64,27 +64,28 @@
         });
 
         blueAutoBox.addEventListener('change', function() {
+          redAutoVal = document.getElementById("redAuton").value;
           if (this.checked) {
-            if (blueAutoVal != "true") {
-                redScore += 10;
-                document.getElementById('redScore').innerText = redScore;
+            if (redAutoVal != "on") {
+                blueScore += 10;
+                document.getElementById('blueScore').innerText = blueScore;
             }
             else {
-                redScore += 5;
-                blueScore -= 5;
-                document.getElementById('redScore').innerText = redScore;
+                blueScore += 5;
+                redScore -= 5;
                 document.getElementById('blueScore').innerText = blueScore;
+                document.getElementById('redScore').innerText = redScore;
             }
           } else {
-            if (blueAutoVal != true) {
-                redScore -= 10;
-                document.getElementById('redScore').innerText = redScore;
+            if (redAutoVal != "on") {
+                blueScore -= 10;
+                document.getElementById('blueScore').innerText = blueScore;
             }
             else {
-                redScore -= 5;
-                blueScore += 5;
-                document.getElementById('redScore').innerText = redScore;
+                blueScore -= 5;
+                redScore += 5;
                 document.getElementById('blueScore').innerText = blueScore;
+                document.getElementById('redScore').innerText = redScore;
             }
           }
         });
