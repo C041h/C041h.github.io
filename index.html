@@ -39,7 +39,7 @@
         redAutoBox.addEventListener('change', function() {
           blueAutoVal = document.getElementById("blueAuton").value;
           if (this.checked) {
-            if (blueAutoVal != "on") {
+            if (blueAutoVal != "on1") {
                 redScore += 10;
                 document.getElementById('redScore').innerText = redScore;
             }
@@ -50,7 +50,7 @@
                 document.getElementById('blueScore').innerText = blueScore;
             }
           } else {
-            if (blueAutoVal != "on") {
+            if (blueAutoVal != "on1") {
                 redScore -= 10;
                 document.getElementById('redScore').innerText = redScore;
             }
@@ -66,7 +66,7 @@
         blueAutoBox.addEventListener('change', function() {
           redAutoVal = document.getElementById("redAuton").value;
           if (this.checked) {
-            if (redAutoVal != "on") {
+            if (redAutoVal != "on1") {
                 blueScore += 10;
                 document.getElementById('blueScore').innerText = blueScore;
             }
@@ -77,7 +77,7 @@
                 document.getElementById('redScore').innerText = redScore;
             }
           } else {
-            if (redAutoVal != "on") {
+            if (redAutoVal != "on1") {
                 blueScore -= 10;
                 document.getElementById('blueScore').innerText = blueScore;
             }
@@ -90,6 +90,78 @@
           }
         });
     </script>
+
+
+
+    <p="display: flex">
+        <input type="checkbox" id="redEndgame" style="display: inline-block; vertical-align: top;">
+        endgame
+        <input type="checkbox" id="blueEndgame" style="display: inline-block; vertical-align: top;">
+    </p>
+
+    <script>
+        var redEndBox = document.getElementById("redEndgame");
+        var blueEndBox = document.getElementById("blueEndgame");
+        var redEndVal;
+        var blueAutoVal;
+        
+
+        redEndBox.addEventListener('change', function() {
+        blueEndVal = document.getElementById("blueEndgame").value;
+        if (this.checked) {
+            if (blueEndVal != "on1") {
+                redScore += 10;
+                document.getElementById('redScore').innerText = redScore;
+            }
+            else {
+                redScore += 5;
+                blueScore -= 5;
+                document.getElementById('redScore').innerText = redScore;
+                document.getElementById('blueScore').innerText = blueScore;
+            }
+        } else {
+            if (blueEndVal != "on1") {
+                redScore -= 10;
+                document.getElementById('redScore').innerText = redScore;
+            }
+            else {
+                redScore -= 5;
+                blueScore += 5;
+                document.getElementById('redScore').innerText = redScore;
+                document.getElementById('blueScore').innerText = blueScore;
+            }
+        }
+        });
+
+        blueEndBox.addEventListener('change', function() {
+        redEndVal = document.getElementById("redEndgame").value;
+        if (this.checked) {
+            if (redEndVal != "on1") {
+                blueScore += 10;
+                document.getElementById('blueScore').innerText = blueScore;
+            }
+            else {
+                blueScore += 5;
+                redScore -= 5;
+                document.getElementById('blueScore').innerText = blueScore;
+                document.getElementById('redScore').innerText = redScore;
+            }
+        } else {
+            if (redEndVal != "on1") {
+                blueScore -= 10;
+                document.getElementById('blueScore').innerText = blueScore;
+            }
+            else {
+                blueScore -= 5;
+                redScore += 5;
+                document.getElementById('blueScore').innerText = blueScore;
+                document.getElementById('redScore').innerText = redScore;
+            }
+        }
+        });
+    </script>
+
+
     
     <p>
          
