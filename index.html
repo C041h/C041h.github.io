@@ -41,9 +41,9 @@
         
 
         redAutoBox.addEventListener('change', function() {
-          blueAutoVal = document.getElementById("blueAuton").value;
+          blueAutoVal = document.getElementById("blueAuton").checked;
           if (this.checked) {
-            if (blueAutoVal != "on1") {
+            if (blueAutoVal == false) {
                 redScore += 10;
                 document.getElementById('redScore').innerText = redScore;
             }
@@ -54,7 +54,7 @@
                 document.getElementById('blueScore').innerText = blueScore;
             }
           } else {
-            if (blueAutoVal != "on1") {
+            if (blueAutoVal == false) {
                 redScore -= 10;
                 document.getElementById('redScore').innerText = redScore;
             }
@@ -68,9 +68,9 @@
         });
 
         blueAutoBox.addEventListener('change', function() {
-          redAutoVal = document.getElementById("redAuton").value;
+          redAutoVal = document.getElementById("redAuton").checked;
           if (this.checked) {
-            if (redAutoVal != "on1") {
+            if (redAutoVal == false) {
                 blueScore += 10;
                 document.getElementById('blueScore').innerText = blueScore;
             }
@@ -81,7 +81,7 @@
                 document.getElementById('redScore').innerText = redScore;
             }
           } else {
-            if (redAutoVal != "on1") {
+            if (redAutoVal == false) {
                 blueScore -= 10;
                 document.getElementById('blueScore').innerText = blueScore;
             }
@@ -197,9 +197,9 @@
         
 
         redEndBox.addEventListener('change', function() {
-        blueEndVal = document.getElementById("blueEndgame").value;
+        blueEndVal = document.getElementById("blueEndgame").checked;
         if (this.checked) {
-            if (blueEndVal != "on1") {
+            if (blueEndVal == false) {
                 redScore += 20;
                 document.getElementById('redScore').innerText = redScore;
             }
@@ -210,7 +210,7 @@
                 document.getElementById('blueScore').innerText = blueScore;
             }
         } else {
-            if (blueEndVal != "on1") {
+            if (blueEndVal == false) {
                 redScore -= 20;
                 document.getElementById('redScore').innerText = redScore;
             }
@@ -224,9 +224,9 @@
         });
 
         blueEndBox.addEventListener('change', function() {
-        redEndVal = document.getElementById("redEndgame").value;
+        redEndVal = document.getElementById("redEndgame").checked;
         if (this.checked) {
-            if (redEndVal != "on1") {
+            if (redEndVal == false) {
                 blueScore += 20;
                 document.getElementById('blueScore').innerText = blueScore;
             }
@@ -237,7 +237,7 @@
                 document.getElementById('redScore').innerText = redScore;
             }
         } else {
-            if (redEndVal != "on1") {
+            if (redEndVal == false) {
                 blueScore -= 20;
                 document.getElementById('blueScore').innerText = blueScore;
             }
@@ -268,6 +268,8 @@
 
 
     <script>
+        
+
         let redScore = 0;
         let redZone1 = 0;
         let redZone2 = 0;
