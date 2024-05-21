@@ -288,15 +288,10 @@
         let blueZone2 = 0;
         let blueBin = 0;
 
-
-
-
-        let redScoreBeach = 0;
         let redZone1Beach = 0;
         let redZone2Beach = 0;
         let redBinBeach = 0;
 
-        let blueScoreBeach = 0;
         let blueZone1Beach = 0;
         let blueZone2Beach = 0;
         let blueBinBeach = 0;
@@ -306,11 +301,12 @@
 
 
         function addRedZone1() {
-            
+            if (redZone1+redZone2+redBin+blueZone1+blueZone2+blueBin<30) {
             redScore+=1;
             redZone1+=1;
             document.getElementById('redScore').innerText = redScore;
             document.getElementById('redZone1').innerText = redZone1;
+            }
         }
         function subRedZone1() {
             if (redZone1>0) {
@@ -322,10 +318,12 @@
         }
 
         function addBlueZone1() {
+            if (redZone1+redZone2+redBin+blueZone1+blueZone2+blueBin<30) {
             blueScore+=1;
             blueZone1+=1;
             document.getElementById('blueScore').innerText = blueScore;
             document.getElementById('blueZone1').innerText = blueZone1;
+            }
         }
         function subBlueZone1() {
             if (blueZone1>0) {
@@ -338,11 +336,12 @@
 
 
         function addRedZone2() {
-            
+            if (redZone1+redZone2+redBin+blueZone1+blueZone2+blueBin<30) {
             redScore+=2;
             redZone2+=1;
             document.getElementById('redScore').innerText = redScore;
             document.getElementById('redZone2').innerText = redZone2;
+            }
         }
         function subRedZone2() {
             if (redZone2>0) {
@@ -354,10 +353,12 @@
         }
 
         function addBlueZone2() {
+            if (redZone1+redZone2+redBin+blueZone1+blueZone2+blueBin<30) {
             blueScore+=2;
             blueZone2+=1;
             document.getElementById('blueScore').innerText = blueScore;
             document.getElementById('blueZone2').innerText = blueZone2;
+            }
         }
         function subBlueZone2() {
             if (blueZone2>0) {
@@ -370,11 +371,12 @@
 
 
         function addRedBin() {
-            
+            if (redZone1+redZone2+redBin+blueZone1+blueZone2+blueBin<30) {
             redScore+=4;
             redBin+=1;
             document.getElementById('redScore').innerText = redScore;
             document.getElementById('redBin').innerText = redBin;
+            }
         }
         function subRedBin() {
             if (redBin>0) {
@@ -386,10 +388,12 @@
         }
 
         function addBlueBin() {
+            if (redZone1+redZone2+redBin+blueZone1+blueZone2+blueBin<30) {
             blueScore+=4;
             blueBin+=1;
             document.getElementById('blueScore').innerText = blueScore;
             document.getElementById('blueBin').innerText = blueBin;
+            }
         }
         function subBlueBin() {
             if (blueBin>0) {
@@ -405,11 +409,12 @@
 
 
         function addRedZone1Beach() {
-            
+            if (redZone1Beach+redZone2Beach+redBinBeach+blueZone1Beach+blueZone2Beach+blueBinBeach<4) {
             redScore+=5;
             redZone1Beach+=1;
             document.getElementById('redScore').innerText = redScore;
             document.getElementById('redZone1Beach').innerText = redZone1Beach;
+            }
         }
         function subRedZone1Beach() {
             if (redZone1Beach>0) {
@@ -421,10 +426,12 @@
         }
 
         function addBlueZone1Beach() {
+            if (redZone1Beach+redZone2Beach+redBinBeach+blueZone1Beach+blueZone2Beach+blueBinBeach<4) {
             blueScore+=5;
             blueZone1Beach+=1;
             document.getElementById('blueScore').innerText = blueScore;
             document.getElementById('blueZone1Beach').innerText = blueZone1Beach;
+            }
         }
         function subBlueZone1Beach() {
             if (blueZone1Beach>0) {
@@ -437,11 +444,12 @@
 
 
         function addRedZone2Beach() {
-            
+            if (redZone1Beach+redZone2Beach+redBinBeach+blueZone1Beach+blueZone2Beach+blueBinBeach<4) {
             redScore+=10;
             redZone2Beach+=1;
             document.getElementById('redScore').innerText = redScore;
             document.getElementById('redZone2Beach').innerText = redZone2Beach;
+            }
         }
         function subRedZone2Beach() {
             if (redZone2Beach>0) {
@@ -453,10 +461,12 @@
         }
 
         function addBlueZone2Beach() {
+            if (redZone1Beach+redZone2Beach+redBinBeach+blueZone1Beach+blueZone2Beach+blueBinBeach<4) {
             blueScore+=10;
             blueZone2Beach+=1;
             document.getElementById('blueScore').innerText = blueScore;
             document.getElementById('blueZone2Beach').innerText = blueZone2Beach;
+            }
         }
         function subBlueZone2Beach() {
             if (blueZone2Beach>0) {
@@ -469,11 +479,12 @@
 
 
         function addRedBinBeach() {
-            
+            if (redZone1Beach+redZone2Beach+redBinBeach+blueZone1Beach+blueZone2Beach+blueBinBeach<4) {
             redScore+=20;
             redBinBeach+=1;
             document.getElementById('redScore').innerText = redScore;
             document.getElementById('redBinBeach').innerText = redBinBeach;
+            }
         }
         function subRedBinBeach() {
             if (redBinBeach>0) {
@@ -485,10 +496,12 @@
         }
 
         function addBlueBinBeach() {
+            if (redZone1Beach+redZone2Beach+redBinBeach+blueZone1Beach+blueZone2Beach+blueBinBeach<4) {
             blueScore+=20;
             blueBinBeach+=1;
             document.getElementById('blueScore').innerText = blueScore;
             document.getElementById('blueBinBeach').innerText = blueBinBeach;
+            }
         }
         function subBlueBinBeach() {
             if (blueBinBeach>0) {
