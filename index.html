@@ -8,18 +8,25 @@
             margin: 5; height: 100%; overflow: hidden
             
         }
+        .red{
+            color:tomato
+        }
+        .blue{
+            color:blue
+        }
+        
     </style>
     <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
 
-    <p>
+    <!-- <p>
         red                        blue
-    </p>
+    </p> -->
 
 
     <h1> 
-    <div style="display: inline-block; vertical-align: top;" id="redScore">0</div>
+    <div style="display: inline-block; vertical-align: top;" class="red" id="redScore">0</div>
               
-    <div style="display: inline-block; vertical-align: top;" id="blueScore">0</div>
+    <div style="display: inline-block; vertical-align: top;" class="blue" id="blueScore">0</div>
     </h1>
 
     <p>
@@ -28,7 +35,7 @@
 
     
     <p="display: flex">
-        <input type="checkbox" id="redAuton" class="check" style="display: inline-block; vertical-align: top;">
+        <input type="checkbox" id="redAuton" class="check"  style="display: inline-block; vertical-align: top;">
         autonomous
         <input type="checkbox" id="blueAuton" class="check" style="display: inline-block; vertical-align: top;">
     </p>
@@ -97,9 +104,6 @@
 
 
 
-
-
-    
     <p>
          
     </p>
@@ -110,31 +114,31 @@
 
     <p="display: flex;">
         <button style="display: inline-block; vertical-align: top;" onclick="subRedZone1()">-</button>
-        <div style="display: inline-block; vertical-align: top;" id="redZone1">0</div>
+        <div style="display: inline-block; vertical-align: top;" class="red" id="redZone1">0</div>
         <button style="display: inline-block; vertical-align: top;" onclick="addRedZone1()">+</button>
          Zone 1 
         <button style="display: inline-block; vertical-align: top;" onclick="subBlueZone1()">-</button>
-        <div style="display: inline-block; vertical-align: top;" id="blueZone1">0</div>
+        <div style="display: inline-block; vertical-align: top;" class="blue" id="blueZone1">0</div>
         <button style="display: inline-block; vertical-align: top;" onclick="addBlueZone1()">+</button>
     </p>
 
     <p="display: flex;">
         <button style="display: inline-block; vertical-align: top;" onclick="subRedZone2()">-</button>
-        <div style="display: inline-block; vertical-align: top;" id="redZone2">0</div>
+        <div style="display: inline-block; vertical-align: top;" class="red" id="redZone2">0</div>
         <button style="display: inline-block; vertical-align: top;" onclick="addRedZone2()">+</button>
          Zone 2 
         <button style="display: inline-block; vertical-align: top;" onclick="subBlueZone2()">-</button>
-        <div style="display: inline-block; vertical-align: top;" id="blueZone2">0</div>
+        <div style="display: inline-block; vertical-align: top;" class="blue" id="blueZone2">0</div>
         <button style="display: inline-block; vertical-align: top;" onclick="addBlueZone2()">+</button>
     </p>
 
     <p="display: flex;">
         <button style="display: inline-block; vertical-align: top;" onclick="subRedBin()">-</button>
-        <div style="display: inline-block; vertical-align: top;" id="redBin">0</div>
+        <div style="display: inline-block; vertical-align: top;" class="red" id="redBin">0</div>
         <button style="display: inline-block; vertical-align: top;" onclick="addRedBin()">+</button>
             Bin    
         <button style="display: inline-block; vertical-align: top;" onclick="subBlueBin()">-</button>
-        <div style="display: inline-block; vertical-align: top;" id="blueBin">0</div>
+        <div style="display: inline-block; vertical-align: top;" class="blue" id="blueBin">0</div>
         <button style="display: inline-block; vertical-align: top;" onclick="addBlueBin()">+</button>
     </p>
 
@@ -148,31 +152,31 @@
 
     <p="display: flex;">
         <button style="display: inline-block; vertical-align: top;" onclick="subRedZone1Beach()">-</button>
-        <div style="display: inline-block; vertical-align: top;" id="redZone1Beach">0</div>
+        <div style="display: inline-block; vertical-align: top;" class="red" id="redZone1Beach">0</div>
         <button style="display: inline-block; vertical-align: top;" onclick="addRedZone1Beach()">+</button>
          Zone 1 
         <button style="display: inline-block; vertical-align: top;" onclick="subBlueZone1Beach()">-</button>
-        <div style="display: inline-block; vertical-align: top;" id="blueZone1Beach">0</div>
+        <div style="display: inline-block; vertical-align: top;" class="blue" id="blueZone1Beach">0</div>
         <button style="display: inline-block; vertical-align: top;" onclick="addBlueZone1Beach()">+</button>
     </p>
 
     <p="display: flex;">
         <button style="display: inline-block; vertical-align: top;" onclick="subRedZone2Beach()">-</button>
-        <div style="display: inline-block; vertical-align: top;" id="redZone2Beach">0</div>
+        <div style="display: inline-block; vertical-align: top;" class="red" id="redZone2Beach">0</div>
         <button style="display: inline-block; vertical-align: top;" onclick="addRedZone2Beach()">+</button>
          Zone 2 
         <button style="display: inline-block; vertical-align: top;" onclick="subBlueZone2Beach()">-</button>
-        <div style="display: inline-block; vertical-align: top;" id="blueZone2Beach">0</div>
+        <div style="display: inline-block; vertical-align: top;" class="blue" id="blueZone2Beach">0</div>
         <button style="display: inline-block; vertical-align: top;" onclick="addBlueZone2Beach()">+</button>
     </p>
 
     <p="display: flex;">
         <button style="display: inline-block; vertical-align: top;" onclick="subRedBinBeach()">-</button>
-        <div style="display: inline-block; vertical-align: top;" id="redBinBeach">0</div>
+        <div style="display: inline-block; vertical-align: top;" class="red" id="redBinBeach">0</div>
         <button style="display: inline-block; vertical-align: top;" onclick="addRedBinBeach()">+</button>
             Bin    
         <button style="display: inline-block; vertical-align: top;" onclick="subBlueBinBeach()">-</button>
-        <div style="display: inline-block; vertical-align: top;" id="blueBinBeach">0</div>
+        <div style="display: inline-block; vertical-align: top;" class="blue" id="blueBinBeach">0</div>
         <button style="display: inline-block; vertical-align: top;" onclick="addBlueBinBeach()">+</button>
     </p>
     
