@@ -28,9 +28,9 @@
 
     
     <p="display: flex">
-        <input type="checkbox" id="redAuton" style="display: inline-block; vertical-align: top;">
+        <input type="checkbox" id="redAuton" class="check" style="display: inline-block; vertical-align: top;">
         autonomous
-        <input type="checkbox" id="blueAuton" style="display: inline-block; vertical-align: top;">
+        <input type="checkbox" id="blueAuton" class="check" style="display: inline-block; vertical-align: top;">
     </p>
 
     <script>
@@ -184,9 +184,9 @@
 
 
     <p="display: flex">
-        <input type="checkbox" id="redEndgame" style="display: inline-block; vertical-align: top;">
+        <input type="checkbox" id="redEndgame" class="check" style="display: inline-block; vertical-align: top;">
         endgame
-        <input type="checkbox" id="blueEndgame" style="display: inline-block; vertical-align: top;">
+        <input type="checkbox" id="blueEndgame" class="check" style="display: inline-block; vertical-align: top;">
     </p>
 
     <script>
@@ -493,7 +493,16 @@
 
     </script>
     <script>
+        function unCheckAll() {
+ 
+        let inputs = document.querySelectorAll('.check');
+
+        for (let i = 0; i < inputs.length; i++) {
+            inputs[i].checked = false;
+        }
+        }
         function reset() {
+            unCheckAll();
             redScore = 0;
             redZone1 = 0;
             redZone2 = 0;
